@@ -4,27 +4,34 @@ function getComputerChoice(computerchoice) {
 }
 
 
-function playRound(playerselection, computerselection) {
-    console.log(playerselection, computerselection);
-    if (playerselection === computerselection) {
-        return "It's a tie!";
+function playRound (playerselection, computerselection){
+        console.log(playerselection, computerselection);
+    
+if (playerselection === computerselection){
+    return "It's a tie!";
     }
-    else if (playerselection === 'rock' && computerselection === 'scissors') {
-        return "You win!";
+else if (playerselection === 'rock' && computerselection === 'scissors'){
+    return "You win!";
     }
-    else if (playerselection === 'paper' && computerselection === 'rock') {
-        return "You win!";
+else if (playerselection === 'paper' && computerselection === 'rock'){
+    return "You win!";
     }
-    else if (playerselection === 'scissors' && computerselection === 'paper') {
-        return "You win!";
+else if (playerselection === 'scissors' && computerselection === 'paper'){
+    return "You win!";
     }
-    else {
-        return "You Lose!";
+
+else {
+    return "You Lose!";
     }
 
 }
-let playerselection = prompt("Choose your weapon").toLowerCase;
-let computerselection = getComputerChoice(computerchoice);
+
+
+const playerselection = prompt("Choose your weapon").toLowerCase();
+const computerselection = getComputerChoice(computerchoice);
+
 console.log(playRound(playerselection,computerselection));
+
+
 
 
