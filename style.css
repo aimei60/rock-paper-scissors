@@ -1,4 +1,18 @@
-.hero {
-    background-color: black;
-    background-image: url("/photos/space.jpeg");
+body {
+    background-color: rgb(203, 56, 56);
+    color: aliceblue;
+    margin: 0px;
+}
+
+.title-container {
+    background-color: rgb(70, 139, 70);
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+    font-family: Apple Chancery, cursive;
+}
+
+.title {
+    font-size: 33px;
 }
