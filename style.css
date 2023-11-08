@@ -16,3 +16,27 @@ body {
 .title {
     font-size: 33px;
 }
+
+.key-containter {
+    text-align: center;
+    background-color: rgb(70, 139, 70);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 60px;
+    margin-right: 60px;
+    border-radius: 30px;
+}
+
+.key-title {
+    font-size: 25px;
+    margin: 15px;
+    text-decoration: underline;
+    font-family: Apple Chancery, cursive;
+}
+
+.christmas-pudding-picture,
+.mistletoe-picture,
+.candy-cane-picture {
+    height: 100px;
+    width: 100px;
+}
