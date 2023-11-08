@@ -9,7 +9,6 @@ body {
     font-weight: bold;
     padding: 10px;
     text-align: center;
-    margin: 0;
     font-family: Apple Chancery, cursive;
 }
 
@@ -18,10 +17,10 @@ body {
 }
 
 .key-containter {
-    display: inline-block;
+    display: flex;
     text-align: center;
-    background-color: rgb(70, 139, 70);
-    margin: 30px;
+    justify-content: center;
+    margin-top: 30px;
     border-radius: 30px;
     padding: 10px;
 }
@@ -37,12 +36,12 @@ body {
 
 .christmas-pudding,
 .mistletoe,
-.candy-cane,
-.key-description {
+.candy-cane {
     font-family: Apple Chancery, cursive;
 }
 
-.key-description {
-    font-size: 25px;
-    text-decoration: underline;
+.CP-key,
+.M-key,
+.CC-key {
+    padding: 18px;
 }
