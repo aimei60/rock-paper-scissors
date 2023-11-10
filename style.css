@@ -3,7 +3,7 @@ body {
     color: aliceblue;
     margin: 0px;
 }
-
+/*title section */
 .title-container {
     background-color: rgb(70, 139, 70);
     font-weight: bold;
@@ -16,6 +16,7 @@ body {
     font-size: 33px;
 }
 
+/*key section */
 .key-containter {
     display: flex;
     text-align: center;
@@ -46,6 +47,7 @@ body {
     padding: 18px;
 }
 
+/*player game section */
 .christmas-pudding-picture1,
 .mistletoe-picture1,
 .candy-cane-picture1 {
@@ -55,8 +57,19 @@ body {
     padding-top: 10px;
 }
 
+/*snow section */
 .material-icons-container {
     display: flex;
     text-align: center;
     justify-content: center;
+}
+
+/*computer game section */
+.christmas-pudding-picture2,
+.mistletoe-picture2,
+.candy-cane-picture2 {
+    height: 100px;
+    width: 100px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
