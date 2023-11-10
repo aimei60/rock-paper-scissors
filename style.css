@@ -29,8 +29,8 @@ body {
 .christmas-pudding-picture,
 .mistletoe-picture,
 .candy-cane-picture {
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     padding-bottom: 10px;
     padding-top: 10px;
 }
@@ -44,17 +44,36 @@ body {
 .CP-key,
 .M-key,
 .CC-key {
-    padding: 18px;
+    padding: 10px;
 }
 
 /*player game section */
+
+.game-title {
+    text-align: center;
+    font-family: Apple Chancery, cursive;
+    font-size: 25px;
+    padding-top: 25px;
+    padding-bottom: 0px;
+}
+
+.game-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+
 .christmas-pudding-picture1,
 .mistletoe-picture1,
 .candy-cane-picture1 {
-    height: 100px;
-    width: 100px;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    height: 110px;
+    width: 110px;
+    padding-bottom: 20px;
+    padding-top: 2px;
+    padding-left: 18px;
+    padding-right: 18px;
 }
 
 /*snow section */
@@ -62,14 +81,46 @@ body {
     display: flex;
     text-align: center;
     justify-content: center;
+    padding: 25px;
 }
 
 /*computer game section */
+
+.computer-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+
+.game-title2 {
+    text-align: center;
+    font-family: Apple Chancery, cursive;
+    font-size: 25px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
 .christmas-pudding-picture2,
 .mistletoe-picture2,
 .candy-cane-picture2 {
-    height: 100px;
-    width: 100px;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    height: 110px;
+    width: 110px;
+    padding-bottom: 20px;
+    padding-top: 2px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+/*results section */
+.results-section {
+    background-color: rgb(70, 139, 70);
+    margin-bottom: 0px;
+}
+
+.results {
+    text-align: center;
+    font-family: Apple Chancery, cursive;
+    font-size: 25px;
 }
