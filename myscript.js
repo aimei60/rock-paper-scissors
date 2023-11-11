@@ -1,3 +1,5 @@
+
+// Game secion
 let playerscore = 0;
 let computerscore = 0;
 let rounds = 0;
@@ -7,6 +9,8 @@ function getComputerChoice() {
     const choices = ['rock', 'paper', 'scissors'];
     return choices[Math.floor(Math.random() * choices.length)];
 }
+
+
 
 function playRound(playerselection, computerselection) {
     if (playerselection === computerselection) {
@@ -48,4 +52,23 @@ function Game() {
 }
 
 //Game();
+
+// UI
+
+const mistletoe = document.getElementById("mistletoe-picture1");
+const candycane = document.getElementById("candy-cane-picture1");
+const christmaspudding = document.getElementById("christmas-pudding-picture1");
+
+/*function player1choice() {
+    mistletoe.addEventListener('click', function() {
+        game1("Rock")
+        })
+
+
+}
+
+*/
+
+
+
 

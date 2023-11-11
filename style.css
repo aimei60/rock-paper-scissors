@@ -68,9 +68,9 @@ body {
     border-radius: 30px;
 }
 
-.christmas-pudding-picture1,
+#christmas-pudding-picture1,
 .mistletoe-picture1,
-.candy-cane-picture1 {
+#candy-cane-picture1 {
     height: 110px;
     width: 110px;
     padding-bottom: 20px;
