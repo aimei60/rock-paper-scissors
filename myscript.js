@@ -55,19 +55,61 @@ function Game() {
 
 // UI
 
-const mistletoe = document.getElementById("mistletoe-picture1");
-const candycane = document.getElementById("candy-cane-picture1");
-const christmaspudding = document.getElementById("christmas-pudding-picture1");
+const mistletoe = document.querySelector(".mistletoe-picture1");
+const candycane = document.querySelector(".candy-cane-picture1");
+const christmaspudding = document.querySelector(".christmas-pudding-picture1");
 
-/*function player1choice() {
-    mistletoe.addEventListener('click', function() {
-        game1("Rock")
-        })
-
-
+function win() {
+    playerscore++;
+    pla
 }
 
-*/
+function lose() {
+    
+}
+
+function tie() {
+    console.log("tie")
+}
+
+function game1(playerChoice) {
+    const computer = getComputerChoice();
+    //console.log("Computer chose " + computer);
+    //console.log("player 1 chose " + playerChoice)
+    switch (playerChoice + " " + computer) {
+        case "rocks cissors":
+        case "paper rock":
+        case "scissor spaper":
+            win();
+            break;
+        case "rock paper":
+        case "paper scissors":
+        case "scissors rock":
+            lose();
+            break;
+        case "rock rock":
+        case "paper paper":
+        case "scissors scissors":
+            tie();
+            break;
+    }
+}
+
+function main() {
+    mistletoe.addEventListener('click', function() {
+        game1("paper")
+    })
+    candycane.addEventListener('click', function() {
+        game1("scissors")
+    })
+    christmaspudding.addEventListener('click', function() {
+        game1("rock")
+    })
+
+}
+main();
+
+
 
 
 
