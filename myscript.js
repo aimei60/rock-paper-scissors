@@ -58,39 +58,51 @@ function Game() {
 const mistletoe = document.querySelector(".mistletoe-picture1");
 const candycane = document.querySelector(".candy-cane-picture1");
 const christmaspudding = document.querySelector(".christmas-pudding-picture1");
+const playerscore_results = document.querySelector(".player-score")
+const computerscore_results = document.querySelector(".computer-score")
+const result = document.querySelector(".result-section")
 
-function win() {
+
+
+function win(user, comp) {
     playerscore++;
-    pla
+    playerscore_results.textContent = playerscore;
+    computerscore_results.textContent = computerscore;
+    result.textContent = user + " beats " + comp + ". You win!"
+
 }
 
-function lose() {
+function lose(user, comp) {
+    computerscore++;
+    playerscore_results.textContent = playerscore;
+    computerscore_results.textContent = computerscore;
+    result.textContent = user + " loses to " + comp + ". You lose!"
     
 }
 
-function tie() {
-    console.log("tie")
+function tie(user, comp) {
+    result.textContent = "You both picked " + user +". It's a draw!"
 }
 
-function game1(playerChoice) {
+function game1(playerchoice) {
     const computer = getComputerChoice();
     //console.log("Computer chose " + computer);
     //console.log("player 1 chose " + playerChoice)
-    switch (playerChoice + " " + computer) {
-        case "rocks cissors":
+    switch (playerchoice + " " + computer) {
+        case "rock scissors":
         case "paper rock":
-        case "scissor spaper":
-            win();
+        case "scissors paper":
+            win(playerchoice, computer);
             break;
         case "rock paper":
         case "paper scissors":
         case "scissors rock":
-            lose();
+            lose(playerchoice, computer);
             break;
         case "rock rock":
         case "paper paper":
         case "scissors scissors":
-            tie();
+            tie(playerchoice, computer);
             break;
     }
 }
