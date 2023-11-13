@@ -12,10 +12,18 @@ const playerscore_results = document.querySelector(".player-score")
 const computerscore_results = document.querySelector(".computer-score")
 const result = document.querySelector(".result-section")
 const rounds_result = document.querySelector(".Rounds")
+const final_result = document.querySelector(".final-results")
+const final_score = document.querySelector(".score")
+const compMistletoe = document.querySelector(".mistletoe2");
+const compCandyCane = document.querySelector(".candy-cane-picture2");
+const compChristmasPudding = document.querySelector(".christmas-pudding-picture2");
 
 function getComputerChoice() {
+    compMistletoe.classList.remove("mistletoe-picture2")
     const choices = ['rock', 'paper', 'scissors'];
     return choices[Math.floor(Math.random() * choices.length)];
+    
+    
 }
 
 
@@ -79,17 +87,16 @@ function game1(playerchoice) {
 
     if (playerscore === 5 || computerscore === 5) {
         gameIsActive = false;
-        console.log("Game Over")
 
         if (playerscore > computerscore) {
-            console.log("You win the game! Congratulations!");
+            final_result.textContent = "Congratulations, you win!"
         } else if (playerscore < computerscore) {
-            console.log("Computer wins the game!");
+            final_result.textContent = "Sorry, you lose!"
         } else {
-            console.log("It's a tie!");
+            final_result.textContent = "It's a tie!"
         }
 
-        console.log("Game over! Final scores are... You:" + " " + playerscore + " " + "Computer:" + " " + computerscore)
+        final_score.textContent = "Final scores are: Player:" + " " + playerscore + " " + "Computer:" + " " + computerscore
     }
     
     
