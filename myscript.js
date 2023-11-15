@@ -17,18 +17,19 @@ const final_score = document.querySelector(".score")
 const compMistletoe = document.querySelector("M2");
 const compCandyCane = document.querySelector("C2");
 const compChristmasPudding = document.querySelector("CP2");
+const playagain = document.querySelector(".play-again")
 
 function getComputerChoice() {
-    const choices = ['christmas pudding', 'mistletoe', 'candy cane'];
+    const choices = ['Christmas pudding', 'Mistletoe', 'Candy cane'];
     const compSelection = choices[Math.floor(Math.random() * choices.length)];
 
-    if (compSelection === 'christmas pudding'){
+    if (compSelection === 'Christmas pudding'){
         CP2.classList.add("highlight");
         setTimeout(function() {CP2.classList.remove("highlight")}, 400);
-    } else if (compSelection === 'mistletoe') {
+    } else if (compSelection === 'Mistletoe') {
         M2.classList.add("highlight");
         setTimeout(function() {M2.classList.remove("highlight")}, 400);
-    } else if (compSelection === 'candy cane') {
+    } else if (compSelection === 'Candy cane') {
         C2.classList.add("highlight");
         setTimeout(function() {C2.classList.remove("highlight")}, 400);
     }
@@ -57,13 +58,13 @@ function tie(user, comp) {
 
 function main() {
     mistletoe.addEventListener('click', function() {
-        game1("mistletoe")
+        game1("Mistletoe")
     })
     candycane.addEventListener('click', function() {
-        game1("candy cane")
+        game1("Candy cane")
     })
     christmaspudding.addEventListener('click', function() {
-        game1("christmas pudding")
+        game1("Christmas pudding")
     })
 
 }
@@ -73,43 +74,47 @@ function game1(playerchoice) {
     const computer = getComputerChoice();
     if (gameIsActive) {
         switch (playerchoice + " " + computer) {
-            case "christmas pudding candy cane":
-            case "mistletoe christmas pudding":
-            case "candy cane mistletoe":
+            case "Christmas pudding Candy cane":
+            case "Mistletoe Christmas pudding":
+            case "Candy cane Mistletoe":
                 win(playerchoice, computer);
                 break;
-            case "christmas pudding mistletoe":
-            case "mistletoe candy cane":
-            case "candy cane christmas pudding":
+            case "Christmas pudding Mistletoe":
+            case "Mistletoe Candy cane":
+            case "Candy cane Christmas pudding":
                 lose(playerchoice, computer);
                 break;
-            case "christmas pudding christmas pudding":
-            case "mistletoe mistletoe":
-            case "candy cane candy cane":
+            case "Christmas pudding Christmas pudding":
+            case "Mistletoe Mistletoe":
+            case "Candy cane Candy cane":
                 tie(playerchoice, computer);
                 break;
             
         } rounds++;
-        rounds_result.textContent = "Round: " + rounds
     }
 
     if (playerscore === 5 || computerscore === 5) {
         gameIsActive = false;
+        CP2.classList.remove("highlight");
+        M2.classList.remove("highlight");
+        C2.classList.remove("highlight");
 
         if (playerscore > computerscore) {
-            final_result.textContent = "Congratulations, you win!"
+            final_result.textContent = "Congratulations, you win the game!"
         } else if (playerscore < computerscore) {
-            final_result.textContent = "Sorry, you lose!"
+            final_result.textContent = "Sorry, you lost the game!"
         } else {
             final_result.textContent = "It's a tie!"
         }
 
         final_score.textContent = "Final scores are: Player:" + " " + playerscore + " " + "Computer:" + " " + computerscore
     }
-    
-    
 }
 
+function refreshPage() {
+    window.location.reload(true);
+}
+playagain.addEventListener('click', refreshPage)
 
 
 
