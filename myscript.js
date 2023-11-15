@@ -19,16 +19,16 @@ const compCandyCane = document.querySelector("C2");
 const compChristmasPudding = document.querySelector("CP2");
 
 function getComputerChoice() {
-    const choices = ['rock', 'paper', 'scissors'];
+    const choices = ['christmas pudding', 'mistletoe', 'candy cane'];
     const compSelection = choices[Math.floor(Math.random() * choices.length)];
 
-    if (compSelection === 'rock'){
+    if (compSelection === 'christmas pudding'){
         CP2.classList.add("highlight");
         setTimeout(function() {CP2.classList.remove("highlight")}, 400);
-    } else if (compSelection === 'paper') {
+    } else if (compSelection === 'mistletoe') {
         M2.classList.add("highlight");
         setTimeout(function() {M2.classList.remove("highlight")}, 400);
-    } else if (compSelection === 'scissors') {
+    } else if (compSelection === 'candy cane') {
         C2.classList.add("highlight");
         setTimeout(function() {C2.classList.remove("highlight")}, 400);
     }
@@ -57,13 +57,13 @@ function tie(user, comp) {
 
 function main() {
     mistletoe.addEventListener('click', function() {
-        game1("paper")
+        game1("mistletoe")
     })
     candycane.addEventListener('click', function() {
-        game1("scissors")
+        game1("candy cane")
     })
     christmaspudding.addEventListener('click', function() {
-        game1("rock")
+        game1("christmas pudding")
     })
 
 }
@@ -73,19 +73,19 @@ function game1(playerchoice) {
     const computer = getComputerChoice();
     if (gameIsActive) {
         switch (playerchoice + " " + computer) {
-            case "rock scissors":
-            case "paper rock":
-            case "scissors paper":
+            case "christmas pudding candy cane":
+            case "mistletoe christmas pudding":
+            case "candy cane mistletoe":
                 win(playerchoice, computer);
                 break;
-            case "rock paper":
-            case "paper scissors":
-            case "scissors rock":
+            case "christmas pudding mistletoe":
+            case "mistletoe candy cane":
+            case "candy cane christmas pudding":
                 lose(playerchoice, computer);
                 break;
-            case "rock rock":
-            case "paper paper":
-            case "scissors scissors":
+            case "christmas pudding christmas pudding":
+            case "mistletoe mistletoe":
+            case "candy cane candy cane":
                 tie(playerchoice, computer);
                 break;
             
