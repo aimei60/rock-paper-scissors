@@ -14,18 +14,26 @@ const result = document.querySelector(".result-section")
 const rounds_result = document.querySelector(".Rounds")
 const final_result = document.querySelector(".final-results")
 const final_score = document.querySelector(".score")
-const compMistletoe = document.querySelector(".mistletoe2");
-const compCandyCane = document.querySelector(".candy-cane-picture2");
-const compChristmasPudding = document.querySelector(".christmas-pudding-picture2");
+const compMistletoe = document.querySelector("M2");
+const compCandyCane = document.querySelector("C2");
+const compChristmasPudding = document.querySelector("CP2");
 
 function getComputerChoice() {
-    compMistletoe.classList.remove("mistletoe-picture2")
     const choices = ['rock', 'paper', 'scissors'];
-    return choices[Math.floor(Math.random() * choices.length)];
-    
-    
-}
+    const compSelection = choices[Math.floor(Math.random() * choices.length)];
 
+    if (compSelection === 'rock'){
+        CP2.classList.add("highlight");
+        setTimeout(function() {CP2.classList.remove("highlight")}, 400);
+    } else if (compSelection === 'paper') {
+        M2.classList.add("highlight");
+        setTimeout(function() {M2.classList.remove("highlight")}, 400);
+    } else if (compSelection === 'scissors') {
+        C2.classList.add("highlight");
+        setTimeout(function() {C2.classList.remove("highlight")}, 400);
+    }
+    return compSelection;
+}
 
 function win(user, comp) {
     playerscore++;
