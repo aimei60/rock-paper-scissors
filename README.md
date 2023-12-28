@@ -15,4 +15,6 @@ I was inspired by the Christmas period to make a Rock, Paper, Scissors game usin
 #### Credits:
 * Images for the game were taken from https://www.freepik.com
 
+Site: https://aimei60.github.io/rock-paper-scissors/
+
 
