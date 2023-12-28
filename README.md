@@ -13,6 +13,6 @@ I was inspired by the Christmas period to make a Rock, Paper, Scissors game usin
 * Javascript
 
 #### Credits:
-* Images for the games were taken from https://www.freepik.com
+* Images for the game were taken from https://www.freepik.com
 
 
