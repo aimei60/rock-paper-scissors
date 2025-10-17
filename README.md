@@ -33,6 +33,6 @@ Here is the preview of the game
 
 ## Credits
 
-- Images for the game were taken from https://www.freepik.com
+Images for the game were taken from https://www.freepik.com
 
 
