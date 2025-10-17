@@ -5,6 +5,7 @@ let computerscore = 0;
 let rounds = 0;
 let gameIsActive = true;
 
+//selecting all of the moving components
 const mistletoe = document.querySelector(".mistletoe-picture1");
 const candycane = document.querySelector(".candy-cane-picture1");
 const christmaspudding = document.querySelector(".christmas-pudding-picture1");
@@ -19,6 +20,7 @@ const compCandyCane = document.querySelector("C2");
 const compChristmasPudding = document.querySelector("CP2");
 const playagain = document.querySelector(".play-again")
 
+//define computer choice
 function getComputerChoice() {
     const choices = ['Christmas pudding', 'Mistletoe', 'Candy cane'];
     const compSelection = choices[Math.floor(Math.random() * choices.length)];
@@ -36,6 +38,7 @@ function getComputerChoice() {
     return compSelection;
 }
 
+//define winner wording
 function win(user, comp) {
     playerscore++;
     playerscore_results.textContent = "Player score: " + playerscore;
@@ -44,6 +47,7 @@ function win(user, comp) {
 
 }
 
+//define loser wording
 function lose(user, comp) {
     computerscore++;
     playerscore_results.textContent = "Player score: " + playerscore;
@@ -52,10 +56,12 @@ function lose(user, comp) {
     
 }
 
+//define tie wording
 function tie(user, comp) {
     result.textContent = "You both picked " + user +". It's a draw!"
 }
 
+//making the tropes clickable
 function main() {
     mistletoe.addEventListener('click', function() {
         game1("Mistletoe")
@@ -70,6 +76,7 @@ function main() {
 }
 main();
 
+//defining the winner or loser or if its a tie
 function game1(playerchoice) {
     const computer = getComputerChoice();
     if (gameIsActive) {
@@ -93,6 +100,7 @@ function game1(playerchoice) {
         } rounds++;
     }
 
+    // calculating the winner and their score
     if (playerscore === 5 || computerscore === 5) {
         gameIsActive = false;
         CP2.classList.remove("highlight");
@@ -111,6 +119,7 @@ function game1(playerchoice) {
     }
 }
 
+// restarts the game after its finished
 function refreshPage() {
     window.location.reload(true);
 }
