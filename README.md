@@ -1,6 +1,6 @@
 # ⛄ Christmas Rock, Paper, Scissors ⛄
 
-I was inspired by the Christmas period to make a Rock, Paper, Scissors game using well-known Christmas tropes.
+I was inspired during the Christmas period to make a Rock, Paper, Scissors game using well-known Christmas tropes.
 
 ## Rules
 
@@ -14,14 +14,14 @@ I was inspired by the Christmas period to make a Rock, Paper, Scissors game usin
 
 ## Languages used
 
-- HTML5
-- CSS3
-- Javascript ES6+
+- HTML
+- CSS
+- Javascript
 
 ## What I learned
 
-- Worked with Javascript (ES6+) to make my game more interactive
-- Experience using functions, event listeners and DOM manipulation
+- Worked with Javascript to make my game more interactive.
+- Experience using functions, event listeners and DOM manipulation.
 - Gained understanding of game logic for example, computer player and tracking scores and defining a winner, loser or a tie.
 
 ## Preview
